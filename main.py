@@ -86,16 +86,6 @@ class Parser:
 
     def main(self):
         self.go_to_browser()
-        # timing = time.time()
-        # timing_2 = time.time()
-        # while True:
-        #     try:
-                # if time.time() - timing > 30.0:
-                #     timing = time.time()
-                #     self.get_stats()
-                # if time.time() - timing_2 > 10.0:
-                #     timing_2 = time.time()
-                #     self.parse()
         schedule.every(30).seconds.do(self.get_stats)
         schedule.every().minute.at(":59").do(self.parse)
         while True:
