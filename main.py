@@ -92,8 +92,6 @@ class Parser:
             schedule.run_pending()
 
 
-            # except Exception:
-            #     pass
 
 
 if __name__ == "__main__":
